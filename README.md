@@ -1,2 +1,12 @@
 # virtualbox-centos-tutorial
-just markdown how to build a simple CNETOS env by virtual box for my working
+just markdown how to build a simple CNETOS env by virtual box for my working, below is the easy way.
+<br />
+1. INSTALL VIRTUALBOX <br />
+2. INSTALL CENTOS <br />
+3. INSTALL NET ADAPTER 1 WITH HOSTONLY FOR THE COMMUNICATION BETWEEN HOST AND VM <br />
+4. INSTALL NET ADAPTER 2 WITH NAT FOR THE VM CAN ACCESS THE INTERNET <br />
+5. LOGIN CENTOS WITH ROOT OR A/C WITH ADMIN PRIVILEGE <br />
+6. UPDATE THE **/etc/sysconfig/network-scripts/ifcfg-enp0s3** NETWORKING CONFIG FILE TO MAKE THE HOSTONLY ADAPTER HAVE A STATIC IP ADDRESS. CHANGE BOOTSTRAP FROM 'DHCP' TO STATIC, ADD **IPADDR**, **NETMASK**, **GATEWAY** ITEMS <br />
+6. RESTART THE NETWORKING WITH ***systemctl restart network*** COMMAND <br />
+7. EDIT THE HOST PC'S HOST FILE TO GIVE A HOSTNAME TO THE HOSTONLY IPADDRESS
+
